@@ -210,10 +210,72 @@
             display: none;
         }
 
+        /* Name Highlight Styles */
+        .name-highlight {
+            color: #007bff;
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
             }
+            .name-highlight {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* Dark Mode Toggle Styles */
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            color: #007bff;
+        }
+
+        /* Dark Mode Styles */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+        }
+
+        [data-theme="dark"] body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .navbar {
+            background-color: var(--card-bg);
+        }
+
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .project-card,
+        [data-theme="dark"] .experience-card,
+        [data-theme="dark"] .certificate-card,
+        [data-theme="dark"] .achievement-card {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+        }
+
+        [data-theme="dark"] .section-title {
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .nav-link {
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .nav-link:hover {
+            color: #007bff;
         }
     </style>
 </head>
@@ -261,7 +323,7 @@
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-lg-row">
                 <div class="col-lg-6 home-content text-center text-lg-start mt-3 mt-lg-0" data-aos="fade-right">
-                    <h1>Hello, I am <span class="typed-text">Akhil</span></h1>
+                    <h1>Hello, I am <span class="name-highlight">Akhil</span></h1>
                     <h2 class="static-text">
                         <span class="normal-text">I'm a</span> 
                         <span class="highlight-text">Full Stack Developer</span>
@@ -285,7 +347,7 @@
                         </a>
                     </div>
                     <div class="text-center text-lg-start">
-                        <a href="https://drive.google.com/file/d/1QLIRp1aznk6-o8ALqxgKB97ede5zxkRf/view?usp=drive_link" class="btn btn-primary btn-lg mt-4">
+                        <a href="https://drive.google.com/file/d/1QLIRp1aznk6-o8ALqxgKB97ede5zxkRf/view?usp=drive_link" target="_blank" class="btn btn-primary btn-lg mt-4">
                             <i class="fas fa-file-alt me-2"></i>View Resume
                         </a>
                     </div>
@@ -613,13 +675,17 @@
                         <div class="project-overlay">
                             <div class="project-content">
                                 <div class="tech-stack">
-                                    <span>Python</span>
-                                    <span>TensorFlow</span>
                                     <span>React</span>
+                                    <span>SQLite</span>
                                     <span>Node.js</span>
+                                    <span>Gemini API</span>
                                 </div>
                                 <div class="project-links">
-                                        <a href="https://github.com/akhilduddi/AI-Powered-Personalized-Tutoring-System" target="_blank" class="btn-code">
+                                    <a href="https://akhil-intel.vercel.app/" target="_blank" class="btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/akhilduddi/AI-Powered-Personalized-Tutoring-System" target="_blank" class="btn-code">
                                         <i class="fab fa-github"></i>
                                         View Code
                                     </a>
