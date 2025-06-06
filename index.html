@@ -1,0 +1,1071 @@
+<!-- 
+    --------------------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------
+    
+                     *            *          *     *             *    * * * * * * * * *         *
+                   *   *          *       *        *             *            *                 *
+                  *     *         *    *           *             *            *                 *
+                 * * * * *        * *              * * * * * * * *            *                 *
+                *         *       *    *           *             *            *                 *
+               *           *      *       *        *             *            *                 *
+              *             *     *          *     *             *    * * * * * * * * *         * * * * * * * * 
+    
+    --------------------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------
+    
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil - Full Stack Developer</title>
+    <link rel="icon" href="https://res.cloudinary.com/dm94ctges/image/upload/v1747334323/1682186789297-02.jpeg_uxemzu.jpg" type="image/jpeg" >
+
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Certificates Section Styles */
+        .certificate-overlay {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .certificate-overlay h4 {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .certificate-overlay p {
+            margin-bottom: 15px;
+        }
+
+        .view-certificate {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 13px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-certificate i {
+            margin-right: 6px;
+            font-size: 12px;
+        }
+
+        .view-certificate:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        
+        /* Project Button Hover Effects */
+        .project-links .btn-demo,
+        .project-links .btn-code {
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 4px;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .project-links .btn-demo {
+            background-color: #007bff;
+            color: white;
+            border: 2px solid #007bff;
+        }
+
+        .project-links .btn-code {
+            background-color: #2c3e50;
+            color: white;
+            border: 2px solid #2c3e50;
+        }
+
+        .project-links .btn-demo:hover {
+            background-color: transparent;
+            color: #007bff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .project-links .btn-code:hover {
+            background-color: transparent;
+            color: #2c3e50;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+        }
+
+        .project-links .btn-demo i,
+        .project-links .btn-code i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-links .btn-demo:hover i,
+        .project-links .btn-code:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Status Button Styling */
+        .project-links .btn-status {
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #6c757d;
+            color: white;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .project-links .btn-status i {
+            margin-right: 8px;
+        }
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-img img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 991px) {
+            .home-img img {
+                max-width: 300px;
+            }
+        }
+
+        /* Updated text styling */
+        .static-text {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        
+        .static-text .normal-text {
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .static-text .highlight-text {
+            color: #007bff;
+            font-weight: 600;
+        }
+        
+        /* Remove typing animation styles since we won't need them */
+        .typing-text::after {
+            display: none;
+        }
+
+        /* Clean Section Title Styles - No decorative elements */
+        .section-title-wrapper {
+            text-align: center;
+            margin-bottom: 40px;
+            border: none;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .section-title:hover {
+            color: #007bff;
+            transform: translateY(-3px);
+        }
+
+        .section-title:before,
+        .section-title:after {
+            display: none;
+        }
+
+        /* Name Highlight Styles */
+        .name-highlight {
+            color: #007bff;
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .name-highlight {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* Dark Mode Toggle Styles */
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            color: #007bff;
+        }
+
+        /* Dark Mode Styles */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+        }
+
+        [data-theme="dark"] body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .navbar {
+            background-color: var(--card-bg);
+        }
+
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .project-card,
+        [data-theme="dark"] .experience-card,
+        [data-theme="dark"] .certificate-card,
+        [data-theme="dark"] .achievement-card {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+        }
+
+        [data-theme="dark"] .section-title {
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .nav-link {
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .nav-link:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Akhil Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 home-content text-center text-lg-start mt-3 mt-lg-0" data-aos="fade-right">
+                    <h1>Hello, I am <span class="name-highlight">Akhil</span></h1>
+                    <h2 class="static-text">
+                        <span class="normal-text">I'm a</span> 
+                        <span class="highlight-text">Full Stack Developer</span>
+                    </h2>
+                    <p class="lead">Turning ideas into elegant, functional solutions</p>
+                    <div class="home-social-links">
+                        <a href="https://github.com/akhilduddi" target="_blank" class="home-social-link github" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/akhil-duddi-88bbb624a" target="_blank" class="home-social-link linkedin" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:akhilduddi95@gmail.com" target="_blank" class="home-social-link email" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://instagram.com/akhilroy_lover" target="_blank" class="home-social-link instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/9550992307" target="_blank" class="home-social-link whatsapp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="text-center text-lg-start">
+                        <a href="https://drive.google.com/file/d/1QLIRp1aznk6-o8ALqxgKB97ede5zxkRf/view?usp=drive_link" target="_blank" class="btn btn-primary btn-lg mt-4">
+                            <i class="fas fa-file-alt me-2"></i>View Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mb-3 mb-lg-0" data-aos="fade-left">
+                    <div class="home-img">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1734596479/akhilroy_react.jpg" alt="Akhil" class="img-fluid rounded-circle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747334323/1682186789297-02.jpeg_uxemzu.jpg" target="_blank" alt="Akhil" class="img-fluid rounded-3">
+                        <div class="about-shape"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="about-content">
+                        <p class="lead mb-3">
+                            I'm currently pursuing a B.Tech at Narasaraopeta Engineering College with a strong passion for software development.
+                        </p>
+                        <p class="mb-3">
+                            Over the past year, I've focused on full-stack development, gaining hands-on experience with technologies like React, Node.js, MongoDB, SQLite, MySQL, and Oracle.
+                        </p>
+                        <p class="mb-3">
+                            I've built several dynamic and impactful applications, including a Student Complaints Management System for my college, an AI-Powered Personalized Tutoring System, a Wikipedia Search Application, and Typing Speed Test websites.
+                        </p>
+                        <p>
+                            I enjoy turning ideas into functional, user-friendly software solutions and continuously strive to expand my skill set.
+                        </p>
+                        <div class="mt-4">
+                            <a href="#contact" class="btn btn-primary me-3">Get In Touch</a>
+                            <a href="#projects" class="btn btn-outline-primary">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-container" data-aos="fade-up">
+                <!-- HTML -->
+                <div class="skill-item">
+                    <i class="fab fa-html5" style="color: #E44D26;"></i>
+                    <span class="skill-name">HTML5</span>
+                </div>
+
+                <!-- CSS -->
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt" style="color: #264DE4;"></i>
+                    <span class="skill-name">CSS3</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-item">
+                    <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="skill-item">
+                    <i class="fab fa-bootstrap" style="color: #7952B3;"></i>
+                    <span class="skill-name">Bootstrap</span>
+                </div>
+
+                <!-- SQLite -->
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
+                    <span class="skill-name">SQLite</span>
+                </div>
+
+                <!-- MySQL -->
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                    <span class="skill-name">MySQL</span>
+                </div>
+
+                <!-- MongoDB -->
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                    <span class="skill-name">MongoDB</span>
+                </div>
+
+                <!-- Node.js -->
+                <div class="skill-item">
+                    <i class="fab fa-node-js" style="color: #339933;"></i>
+                    <span class="skill-name">Node.js</span>
+                </div>
+
+                <!-- Express.js -->
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
+                    <span class="skill-name">Express.js</span>
+                </div>
+
+                <!-- React.js -->
+                <div class="skill-item">
+                    <i class="fab fa-react" style="color: #61DAFB;"></i>
+                    <span class="skill-name">React.js</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+                    <span class="skill-name">Next.js</span>
+                </div>
+
+                <!-- Git -->
+                <div class="skill-item">
+                    <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                    <span class="skill-name">Git</span>
+                </div>
+
+                <!-- Power BI -->
+                <div class="skill-item">
+                    <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" alt="Power BI">
+                    <span class="skill-name">Power BI</span>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-item">
+                    <i class="fab fa-python" style="color: #3776AB;"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+
+                <!-- Cursor -->
+                <div class="skill-item">
+                    <i class="fas fa-terminal" style="color: #000000;"></i>
+                    <span class="skill-name">Cursor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="experience-container">
+                <div class="row g-4">
+                    <!-- Full Stack Developer Role -->
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="header-content d-flex align-items-center mb-2">
+                                    <span class="experience-icon me-2">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </span>
+                                    <h3 class="mb-0">Full Stack Developer</h3>
+                                </div>
+                                    <div class="company-info">
+                                        <p class="company-name">AB DIGITALS (Part-Time)</p>
+                                        <p class="experience-date">Apr 2024 - Present</p>
+                                </div>
+                            </div>
+                            <div class="experience-body">
+                                <ul class="experience-achievements">
+                                    <li>Building full-stack web applications with React.js and Node.js</li>
+                                    <li>Implementing responsive designs and optimizing performance</li>
+                                    <li>Collaborating with teams for project delivery</li>
+                                    <li>Managing code quality with Git version control</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Freelancer Role -->
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="header-content d-flex align-items-center mb-2">
+                                    <span class="experience-icon me-2">
+                                        <i class="fas fa-code"></i>
+                                    </span>
+                                    <h3 class="mb-0">Freelancer</h3>
+                                </div>
+                                    <div class="company-info">
+                                        <p class="company-name">Web Application Projects</p>
+                                        <p class="experience-date">2023 - Present</p>
+                                </div>
+                            </div>
+                            <div class="experience-body">
+                                <ul class="experience-achievements">
+                                    <li>Developing custom websites for diverse clients</li>
+                                    <li>Managing project timelines and client expectations</li>
+                                    <li>Implementing modern web technologies and best practices</li>
+                                    <li>Creating blogs, dashboards, and landing pages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <h2 class="section-title">My Projects</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Typing Speed Test -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card h-100">
+                    <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1616004667892-d348f7349d39?w=800&auto=format&fit=crop&q=60" alt="Typing Speed Test" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                        <a href="https://textyourspeed.ccbp.tech" target="_blank" class="btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                        <a href="https://github.com/akhilduddi/Typing-Speed-Test" target="_blank" class="btn-code">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="project-details p-3">
+                            <h3 class="h5">Typing Speed Test</h3>
+                            <p class="small mb-0">A web application to measure and improve typing speed with real-time feedback and performance tracking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wikipedia Search -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card h-100">
+                    <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=800&auto=format&fit=crop&q=60" alt="Wikipedia Search" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                        <span>HTML</span>
+                                    <span>API</span>
+                                    <span>CSS</span>
+                                        <span>JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                        <a href="https://akhipedia.ccbp.tech" target="_blank" class="btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                        <a href="https://github.com/akhilduddi/wikipedia-Search" target="_blank" class="btn-code">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="project-details p-3">
+                            <h3 class="h5">Wikipedia Search</h3>
+                            <p class="small mb-0">A search application that fetches and displays Wikipedia articles using their API with dynamic results.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Munch Website -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card h-100">
+                    <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop&q=60" alt="Food Munch Website" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>Responsive Design</span>
+                                </div>
+                                <div class="project-links">
+                                        <a href="https://akhilfoodd.ccbp.tech/" target="_blank" class="btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                        <a href="https://github.com/akhilduddi/Food-Munch" target="_blank" class="btn-code">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="project-details p-3">
+                            <h3 class="h5">Food Munch Website</h3>
+                            <p class="small mb-0">A responsive restaurant website showcasing menu items, special offers, and online ordering capabilities built with pure HTML and CSS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tutoring System -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card h-100">
+                    <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1509869175650-a1d97972541a?w=800&auto=format&fit=crop&q=60" alt="AI Tutor" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>SQLite</span>
+                                    <span>Node.js</span>
+                                    <span>Gemini API</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://akhil-intel.vercel.app/" target="_blank" class="btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/akhilduddi/AI-Powered-Personalized-Tutoring-System" target="_blank" class="btn-code">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="project-details p-3">
+                            <h3 class="h5">AI-Powered Tutoring System</h3>
+                            <p class="small mb-0">An intelligent tutoring system that provides personalized learning experiences using AI algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Complaints System -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card h-100">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop&q=60" alt="Student Complaints System" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <div class="tech-stack">
+                                        <span>Node.js</span>
+                                        <span>Express</span>
+                                        <span>MongoDB</span>
+                                        <span>React</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <span class="btn-status">
+                                            <i class="fas fa-clock"></i>
+                                            To Be Published
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details p-3">
+                            <h3 class="h5">Student Complaints Management</h3>
+                            <p class="small mb-0">A comprehensive system for managing and tracking student complaints in educational institutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blood Donation -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card h-100">
+                    <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=800&auto=format&fit=crop&q=60" alt="Blood Donation" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                    <span>Next.js</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                    <span>Express</span>
+                                </div>
+                                <div class="project-links">
+                                        <span class="btn-status">
+                                            <i class="fas fa-hourglass"></i>
+                                            Coming Soon
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details p-3">
+                            <h3 class="h5">Online Blood Donation</h3>
+                            <p class="small mb-0">A platform connecting blood donors with those in need of blood donations, featuring real-time matching.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <h2 class="section-title">My Certificates</h2>
+            </div>
+            <div class="certificates-grid">
+                <!-- Static Web Development Certificate -->
+                <div class="certificate-card" data-aos="fade-up">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370356/Static_Web_nfogrf.png" alt="Static Web Development">
+                        <div class="certificate-overlay">
+                            <h4>Static Web Development</h4>
+                            <p>NxtWave</p>
+                            <a href="https://certificates.ccbp.in/academy/static-website?id=UKYHOHDYVQ" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsive Web Design Certificate -->
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370354/Responsive_Web_feve9h.png" alt="Responsive Web Design">
+                        <div class="certificate-overlay">
+                            <h4>Responsive Web Design</h4>
+                            <p>NxtWave</p>
+                            <a href="https://certificates.ccbp.in/academy/build-your-own-responsive-website?id=EJCEONFFQA" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Web Applications Certificate -->
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370354/Dynamic_Web_dty3eb.png" alt="Dynamic Web Applications">
+                        <div class="certificate-overlay">
+                            <h4>Dynamic Web Applications</h4>
+                            <p>NxtWave</p>
+                            <a href="https://certificates.ccbp.in/academy/dynamic-web-application?id=EFOAHQUMKX" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python Programming Certificate -->
+                <div class="certificate-card" data-aos="fade-up">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370354/python_udanfu.png" alt="Python Programming">
+                        <div class="certificate-overlay">
+                            <h4>Python Programming</h4>
+                            <p>NxtWave</p>
+                            <a href="https://certificates.ccbp.in/academy/programming-foundations-with-python?id=CGOLLZHMHQ" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XPM Certificate -->
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370358/xpm_j3akdp.png" alt="XPM Fundamentals">
+                        <div class="certificate-overlay">
+                            <h4>XPM 4.0 Fundamentals</h4>
+                            <p>NxtWave</p>
+                            <a href="https://certificates.ccbp.in/academy/xpm-4-0-fundamentals?id=TDENVTABED" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Basic Certificate -->
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370354/javascript_basic_tktrvb.png" alt="SQL Basic Certificate">
+                        <div class="certificate-overlay">
+                            <h4>SQL Basic</h4>
+                            <p>HackerRank</p>
+                            <a href="https://www.hackerrank.com/certificates/a79110c9f807" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Intermediate Certificate -->
+                <div class="certificate-card" data-aos="fade-up">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370354/SQL_Intermidiate_d9rged.png" alt="SQL Intermediate Certificate">
+                        <div class="certificate-overlay">
+                            <h4>SQL Intermediate</h4>
+                            <p>HackerRank</p>
+                            <a href="https://www.hackerrank.com/certificates/30af7edfa94f" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Advanced Certificate -->
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370355/SQL_Advanced_whbcnc.png" alt="SQL Advanced Certificate">
+                        <div class="certificate-overlay">
+                            <h4>SQL Advanced</h4>
+                            <p>HackerRank</p>
+                            <a href="https://www.hackerrank.com/certificates/cb341d9ace3a" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Basic Certificate -->
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-image">
+                        <img src="https://res.cloudinary.com/dm94ctges/image/upload/v1747370354/javascript_basic_tktrvb.png" alt="JavaScript Basic Certificate">
+                        <div class="certificate-overlay">
+                            <h4>JavaScript Basic</h4>
+                            <p>HackerRank</p>
+                            <a href="https://www.hackerrank.com/certificates/af14331c0d0e" target="_blank" class="view-certificate">
+                                <i class="fas fa-award"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <h2 class="section-title">Achievements</h2>
+            </div>
+            <div class="achievements-grid">
+                <!-- Competition Achievement -->
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-badge">
+                            <span>2nd Prize</span>
+                        </div>
+                        <h3>AlgoArena (DSA Competition)</h3>
+                        <div class="achievement-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Spardha Fest</span>
+                            <span><i class="fas fa-university"></i> VVIT College</span>
+                        </div>
+                        <p class="achievement-description">
+                            Secured 2nd place in AlgoArena, demonstrating strong problem-solving abilities in DSA challenges under timed conditions.
+                        </p>
+                        <a href="https://www.linkedin.com/posts/akhil-duddi-88bbb624a_spardha-algoarena-python-activity-7247668885770960896-7zqu" target="_blank" class="achievement-btn">
+                            <i class="fab fa-linkedin"></i> View on LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Achievement -->
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-badge">
+                            <span>Full Stack Project</span>
+                        </div>
+                        <h3>Student Complaint Management System</h3>
+                        <div class="achievement-meta">
+                            <span><i class="fas fa-code-branch"></i> 3rd Year Project</span>
+                            <div class="tech-pills">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                        <p class="achievement-description">
+                            A full-stack web app for managing student complaints with role-based access and secure authentication.
+                        </p>
+                        <div class="achievement-btn coming-soon">
+                            <i class="fas fa-clock"></i> LinkedIn Post Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <h2 class="section-title">Get in Touch</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-wrapper">
+                        <div class="contact-decoration">
+                            <div class="decoration-circle"></div>
+                            <div class="decoration-line"></div>
+                        </div>
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="ad304094-6fdd-4666-b706-723eee85677d">
+                            
+                            <!-- Honeypot Spam Protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                                        <label for="phone">Phone Number</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-heading"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class="fas fa-comment"></i>
+                                </span>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" style="height: 120px" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-submit">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    Need a Portfolio Website Like This | Contact 
+                    <a href="https://www.linkedin.com/in/akhil-duddi-88bbb624a/" target="_blank" class="footer-name">Akhil Duddi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Library for Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Update in the home section where the typing text was -->
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
+</body>
+</html>
